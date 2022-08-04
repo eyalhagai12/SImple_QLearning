@@ -48,9 +48,8 @@ def main():
                 # exploitation
                 action = table.get_next_move(agent_location, target_location)
 
-            # do the step and update Q-table
+            # do the step and update Q-table if we are at the training phase
             obs, reward, done, _ = env.step(action)
-
             if not test:
                 table.update(agent_location, target_location, action, reward)
 
