@@ -15,7 +15,7 @@ def main():
     max_steps = 25
     exploration_prob = 0.5
     test_episodes = 20
-    train_episodes = episodes - (test_episodes + 1)
+    train_episodes = episodes - test_episodes
     n_notify = 1000
 
     for episode_num in range(episodes):
@@ -29,7 +29,7 @@ def main():
         # step parameters
         steps = 0
         done = False
-        test = episode_num > train_episodes
+        test = episode_num >= train_episodes
 
         if episode_num == train_episodes:
             print("Starting Test Episodes")
