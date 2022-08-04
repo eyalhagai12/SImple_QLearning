@@ -56,7 +56,7 @@ def main():
 
             steps += 1
 
-            # show progression every n_notify episodes
+            # show test episodes
             if test:
                 env.render()
     print("Done!")
